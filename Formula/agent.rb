@@ -4,32 +4,39 @@
 class Agent < Formula
   desc "CLI to create research agents from the terminal (Contextual AI)"
   homepage "https://github.com/jinashrouniyar-268/agent-composer"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     on_intel do
       url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Darwin_x86_64.tar.gz"
-      sha256 "53deb575c7a22f5491a748b3c10f4303389d32644aaf76244d0be18999b330c5"
+      sha256 "5d904722bd89e788ee76e90a5af1682dcec38dab50b94f90a34d3e81c97d7e7b"
     end
     on_arm do
       url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Darwin_arm64.tar.gz"
-      sha256 "b30cd24d6fbc3c3c0d4924a812cd82c930d7723bb5403f89f4b04fc2ca560ffa"
+      sha256 "e3b22f3b58d7451277466d7c755bfefcf90287d178263963d6ec388a293fb403"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Linux_x86_64.tar.gz"
-      sha256 "9b669bed666a3125dcae6702c1e9d94b715dedc494617d0360ca2f730e2f696b"
+      sha256 "d1a321670d0f784db963ac7c174bd3c543709798232404a80bf7854598cb3934"
     end
     on_arm do
       url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Linux_arm64.tar.gz"
-      sha256 "dc7197a58cd8b96e60f8c48cccbd580c63bbb04ad810c0c24c11689d86ae127a"
+      sha256 "02e8dfc3bbbc1d5d30afdac5f95c13d38d1dab737f0436cfd11f351b3eebfe72"
     end
   end
 
   def install
     bin.install "agent"
+  end
+
+  def post_install
+    return unless OS.mac?
+
+    ohai "Removing quarantine attribute..."
+    system "/usr/bin/xattr", "-dr", "com.apple.quarantine", "#{bin}/agent"
   end
 
   test do
