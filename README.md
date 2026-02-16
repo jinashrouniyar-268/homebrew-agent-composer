@@ -1,23 +1,23 @@
 # Homebrew Agent Composer Tap
 
-Homebrew tap for the [Agent Composer CLI](https://github.com/YOUR_ORG/agent-composer).
+Homebrew tap for the [Agent Composer CLI](https://github.com/jinashrouniyar-268/agent-composer).
 
 ## Installation
 
 ```bash
-brew install YOUR_ORG/agent-composer/agent
+brew install jinashrouniyar-268/agent-composer/agent
 ```
 
 Or tap first:
 
 ```bash
-brew tap YOUR_ORG/agent-composer
+brew tap jinashrouniyar-268/agent-composer
 brew install agent
 ```
 
 ## Updating the Formula
 
-After a new release is published on [agent-composer](https://github.com/YOUR_ORG/agent-composer/releases), update the formula:
+After a new release is published on [agent-composer](https://github.com/jinashrouniyar-268/agent-composer/releases), update the formula:
 
 ```bash
 ./scripts/update-formula.sh <version>
@@ -36,6 +36,6 @@ If the product repo has `HOMEBREW_TOKEN` configured, pushing a tag (e.g. `v0.1.0
 
 ## Documentation
 
-For agent usage, see the [agent-composer repository](https://github.com/YOUR_ORG/agent-composer).
+For agent usage, see the [agent-composer repository](https://github.com/jinashrouniyar-268/agent-composer).
 
 For Homebrew help, run `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).

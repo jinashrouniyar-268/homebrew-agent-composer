@@ -3,27 +3,27 @@
 
 class Agent < Formula
   desc "CLI to create research agents from the terminal (Contextual AI)"
-  homepage "https://github.com/YOUR_ORG/agent-composer"
+  homepage "https://github.com/jinashrouniyar-268/agent-composer"
   version "0.0.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/YOUR_ORG/agent-composer/releases/download/v#{version}/agent_Darwin_x86_64.tar.gz"
+      url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Darwin_x86_64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
     on_arm do
-      url "https://github.com/YOUR_ORG/agent-composer/releases/download/v#{version}/agent_Darwin_arm64.tar.gz"
+      url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Darwin_arm64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/YOUR_ORG/agent-composer/releases/download/v#{version}/agent_Linux_x86_64.tar.gz"
+      url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Linux_x86_64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
     on_arm do
-      url "https://github.com/YOUR_ORG/agent-composer/releases/download/v#{version}/agent_Linux_arm64.tar.gz"
+      url "https://github.com/jinashrouniyar-268/agent-composer/releases/download/v#{version}/agent_Linux_arm64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
