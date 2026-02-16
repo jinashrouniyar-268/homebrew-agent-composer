@@ -32,13 +32,6 @@ class Agent < Formula
     bin.install "agent"
   end
 
-  def post_install
-    return unless OS.mac?
-
-    ohai "Removing quarantine attribute..."
-    system "/usr/bin/xattr", "-dr", "com.apple.quarantine", "#{bin}/agent"
-  end
-
   test do
     system "#{bin}/agent", "--version"
   end
